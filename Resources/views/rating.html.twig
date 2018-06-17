@@ -1,7 +1,7 @@
-{# blackknight467/StarRatingBundle/Resources/views/rating.html.twig #}
-{% block rating_widget %}
+
+{% block star_rating_widget %}
   {% spaceless %}
-    <div {{ block('rating_widget_container_attributes') }}>
+    <div {{ block('star_rating_widget_container_attributes') }}>
       {# type="number" doesn't work with floats #}
       {% set type = type|default('text') %}
       <div class="rating-well">
@@ -12,9 +12,9 @@
       </div>
     </div>
   {% endspaceless %}
-{% endblock rating_widget %}
+{% endblock star_rating_widget %}
 
-{% block rating_widget_container_attributes %}
+{% block star_rating_widget_container_attributes %}
 {% spaceless %}
     {%- for attrname, attrvalue in attr -%}
         {{- " " -}}
@@ -27,4 +27,4 @@
         {%- endif -%}
     {%- endfor -%}
 {% endspaceless %}
-{% endblock rating_widget_container_attributes %}
+{% endblock star_rating_widget_container_attributes %}

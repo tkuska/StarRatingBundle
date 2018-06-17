@@ -36,6 +36,6 @@ class StarRatingType extends AbstractType
 
     public function getName()
     {
-        return 'rating';
+        return 'star_rating';
     }
 }

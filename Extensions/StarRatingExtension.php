@@ -21,14 +21,19 @@ class StarRatingExtension extends \Twig_Extension
         );
     }
 
-    public function rating($number, $max = 5, $starSize = "")
+    public function rating($number, $max = 5, $starSize = "", $inline = false)
     {
+        $tag = 'div';
+        if ($inline) {
+            $tag = 'span';
+        }
         return $this->container->get('twig')->render(
             '@BrokoskokoliStarRatingBundle/Display/ratingDisplay.html.twig',
             array(
                 'stars' => $number,
                 'max' => $max,
-                'starSize' => $starSize
+                'starSize' => $starSize,
+                'tag' => $tag,
             )
         );
     }

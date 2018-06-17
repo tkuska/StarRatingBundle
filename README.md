@@ -29,14 +29,21 @@ Add the following to the "require" section of your `composer.json` file:
     "blackknight467/star-rating-bundle": "2.*"
 ```
 
-### Step 2: Add config
+### Step 2: Enable the bundle
 
+Enable the bundle in the kernel:
 
-```
-twig:
-    paths:
-        '%kernel.project_dir%/templates': templates
-        '%kernel.project_dir%/vendor/brokoskokoli/star-rating-bundle/Resources/views': BrokoskokoliStarRatingBundle
+```php
+<?php
+// app/appKernel.php
+
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new blackknight467\StarRatingBundle\StarRatingBundle(),
+    );
+}
 ```
 
 ### Step 3: Add the css

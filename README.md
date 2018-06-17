@@ -1,6 +1,12 @@
 StarRatingBundle
 ================
 
+This is a fork of the blackknight467 StarRatingBundle and support symfony 4!
+
+
+Old  Readme
+===========
+
 Star Rating Bundle for Symfony 3.  Requires Jquery and Font Awesome.
 
 If Using Symfony 2.  Use version 1.*

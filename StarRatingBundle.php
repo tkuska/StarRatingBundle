@@ -1,6 +1,6 @@
 <?php
 
-namespace blackknight467\StarRatingBundle;
+namespace Brokoskokoli\StarRatingBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

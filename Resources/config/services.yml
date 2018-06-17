@@ -2,12 +2,12 @@ parameters:
 
 services:
     star_rating.type:
-        class: blackknight467\StarRatingBundle\Form\RatingType
+        class: Brokoskokoli\StarRatingBundle\Form\RatingType
         tags:
             - { name: form.type, alias: rating }
 
     star_rating.twig:
-        class: blackknight467\StarRatingBundle\Extensions\StarRatingExtension
+        class: Brokoskokoli\StarRatingBundle\Extensions\StarRatingExtension
         tags: [{ name: twig.extension }]
         arguments:
             - '@service_container'

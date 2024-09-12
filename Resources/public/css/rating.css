@@ -11,7 +11,7 @@
     display: none;
 }
 
-.rating div.star , .rating span.star {
+.rating div.star {
     font-family:FontAwesome;
     font-weight:normal;
     font-style:normal;
@@ -20,22 +20,22 @@
     position: relative;
 }
 
-.rating div.star:hover , .rating span.star:hover {
+.rating div.star:hover {
     cursor:pointer;
 }
 
-.rating div.star:before, .rating span.star:before {
+.rating div.star:before {
     content:"\f006";
     padding-right:5px;
     color:#999;
 }
 
-.rating div.star:hover:before,.rating div.star:hover~div.star:before, .rating span.star:hover:before,.rating span.star:hover~span.star:before {
+.rating div.star:hover:before,.rating div.star:hover~div.star:before {
     content:"\f005";
     color:#e3cf7a;
 }
 
-.rating div.star-full, .rating span.star-full {
+.rating div.star-full {
     font-family:FontAwesome;
     font-weight:normal;
     font-style:normal;
@@ -44,13 +44,13 @@
     position: relative;
 }
 
-.rating div.star-full:before, .rating span.star-full:before  {
+.rating div.star-full:before  {
     content:"\f005";
     padding-right:5px;
     color:#e3cf7a;
 }
 
-.rating div.star-empty, .rating span.star-empty {
+.rating div.star-empty {
     font-family:FontAwesome;
     font-weight:normal;
     font-style:normal;
@@ -59,34 +59,34 @@
     position: relative;
 }
 
-.rating div.star-empty:before ,.rating span.star-empty:before  {
+.rating div.star-empty:before  {
     content:"\f006";
     padding-right:5px;
     color:#999;
 }
 
-.rating div.fa-norm , .rating span.fa-norm{
+.rating div.fa-norm {
     font-size: 1em;
 }
 
-.rating div.fa-lg , .rating span.fa-lg{
+.rating div.fa-lg {
     font-size: 1.33333333em;
     line-height: 0.75em;
     vertical-align: -15%;
 }
 
-.rating div.fa-2x, .rating span.fa-2x {
+.rating div.fa-2x {
     font-size: 2em;
 }
 
-.rating div.fa-3x, .rating span.fa-3x {
+.rating div.fa-3x {
     font-size: 3em;
 }
 
-.rating div.fa-4x, .rating span.fa-4x {
+.rating div.fa-4x {
     font-size: 4em;
 }
 
-.rating div.fa-5x , .rating span.fa-5x{
+.rating div.fa-5x {
     font-size: 5em;
 }

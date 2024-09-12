@@ -3,8 +3,10 @@
 namespace Brokoskokoli\StarRatingBundle\Extensions;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class StarRatingExtension extends \Twig_Extension
+class StarRatingExtension extends AbstractExtension
 {
 
     protected $container;
@@ -17,23 +19,18 @@ class StarRatingExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter('rating', array($this, 'rating'), array('is_safe' => array('all'))),
+            new TwigFilter('rating', array($this, 'rating'), array('is_safe' => array('all'))),
         );
     }
 
-    public function rating($number, $max = 5, $starSize = "", $inline = false)
+    public function rating($number, $max = 5, $starSize = "")
     {
-        $tag = 'div';
-        if ($inline) {
-            $tag = 'span';
-        }
         return $this->container->get('twig')->render(
-            '@BrokoskokoliStarRatingBundle/Display/ratingDisplay.html.twig',
+            'StarRatingBundle:Display:ratingDisplay.html.twig',
             array(
                 'stars' => $number,
                 'max' => $max,
-                'starSize' => $starSize,
-                'tag' => $tag,
+                'starSize' => $starSize
             )
         );
     }

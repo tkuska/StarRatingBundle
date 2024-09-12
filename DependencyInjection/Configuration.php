@@ -15,10 +15,9 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritDoc}
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('star_rating');
-        $rootNode = $treeBuilder->buildTree();
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

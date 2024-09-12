@@ -46,14 +46,6 @@ public function registerBundles()
 }
 ```
 
-Add the config for TWIG:
-
-```yaml 
-twig:
-    paths:
-        '%kernel.project_dir%/vendor/brokoskokoli/star-rating-bundle/Resources/views': BrokoskokoliStarRatingBundle
-```
-
 ### Step 3: Add the css
 
 Add the css in your page head
